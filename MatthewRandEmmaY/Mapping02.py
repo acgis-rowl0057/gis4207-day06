@@ -9,8 +9,12 @@
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
 
-def main():
-    pass
+import arcpy
 
-if __name__ == '__main__':
-    main()
+mxd = arcpy.mapping.MapDocument("CURRENT")
+
+def setActiveView():
+    mxd.activeView = "World"
+
+setActiveView()
+
