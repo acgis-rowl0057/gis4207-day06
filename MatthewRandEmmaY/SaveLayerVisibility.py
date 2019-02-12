@@ -1,14 +1,13 @@
 #-------------------------------------------------------------------------------
-# Name:        module3
+# Name:        SaveLayerVisibility
 # Purpose:
 #
-# Author:      rowla
+# Author:      Matthew Rowland
 #
 # Created:     12-02-2019
-# Copyright:   (c) rowla 2019
+# Copyright:   (c) rowland 2019
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
-
 def main():
     pass
 
