@@ -9,8 +9,15 @@
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
 
-def main():
-    pass
+import arcpy
 
-if __name__ == '__main__':
-    main()
+mxd = arcpy.mapping.MapDocument(r'D:\Semester2\gis4207_Customization_I\Data\MappingEx.mxd')
+
+mxd.title = "arcpy.mapping module exercises"
+mxd.author = "Matthew and Emma"
+mxd.credits = "David Viljoen made me do it"
+mxd.summary = "See Description"
+mxd.description = "This document was used for practicing Python coding with the arcpy.mapping module."
+mxd.tags = "arcpy.mapping.python.gis4207"
+
+mxd.save()
