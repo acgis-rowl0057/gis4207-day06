@@ -12,20 +12,21 @@ import arcpy
 import os
 
 mxd = arcpy.mapping.MapDocument(r'D:\Semester2\gis4207_Customization_I\Data\MappingEx.mxd')
+savePath = r'D:\Semester2\gis4207_Customization_I\day06'
 
 def main():
-    savePath = r'D:\Semester2\gis4207_Customization_I\day06'
     fileName = "LayerVisibility"
     completeName = os.path.join(savePath,fileName + ".txt")
     file1 = open(completeName, "w")
-    file1.write(getNameVisibility())
+    file1.write(getDataLayerInfo())
     file1.close()
 
-
-def getNameVisibility():
+def getDataLayerInfo():
     for df in arcpy.mapping.ListDataFrames(mxd):
         for lyr in arcpy.mapping.ListLayers(mxd,"",df):
             return df.name, '\t', lyr.name, '\t', lyr.visible
+
+
 
 
 if __name__ == "__main__":
