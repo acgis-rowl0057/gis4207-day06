@@ -9,8 +9,19 @@
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
 
-def main():
-    pass
+import arcpy
+import os
 
-if __name__ == '__main__':
-    main()
+mxd = arcpy.mapping.MapDocument(r'D:\Semester2\gis4207_Customization_I\Data\MappingEx.mxd')
+savePath = r'D:\Semester2\gis4207_Customization_I\day06'
+
+def writeToText():
+    fileName = "DataFrameReport"
+    completeName = os.path.join(savePath,fileName + ".txt")
+    file1 = open(completeName, "w")
+    file1.write ("Data Frame\tScale\tExtent\n")
+    for df in arcpy.mapping.ListDataFrames(mxd):
+        file1.write ("{}\t{}\t{}\n".format(df.name,df.scale,df.extent))
+    file1.close()
+
+writeToText()
