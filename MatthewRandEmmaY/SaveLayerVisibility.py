@@ -18,6 +18,7 @@ def writeToText():
     fileName = "LayerVisibility"
     completeName = os.path.join(savePath,fileName + ".txt")
     file1 = open(completeName, "w")
+    file1.write ("Data Frame\tLayer\tVisibility\n")
     for df in arcpy.mapping.ListDataFrames(mxd):
         for lyr in arcpy.mapping.ListLayers(mxd,"",df):
             file1.write ("{}\t{}\t{}\n".format(df.name,lyr.name,lyr.visible))
