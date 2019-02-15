@@ -17,7 +17,8 @@ def getPath():
         for lyr in arcpy.mapping.ListLayers(mxd,"",df):
             if lyr.supports("DATASOURCE"):
                 desc = arcpy.Describe(lyr)
-                print ("{}\t{}\t{}\t{}").format(lyr.name,lyr.dataSource,lyr.dataSource.endswith(".shp"), desc.dataType)
+                if lyr.dataSource.endswith(".shp"):
+                    print ("{}\t{}\t{}").format(lyr.name,lyr.dataSource, desc.shapetype)
 
 getPath()
 
