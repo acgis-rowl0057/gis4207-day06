@@ -8,8 +8,10 @@
 # Copyright:   (c) rowland 2019
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
-def main():
-    pass
+import arcpy
 
-if __name__ == '__main__':
-    main()
+mxd = arcpy.mapping.MapDocument(r'D:\Semester2\gis4207_Customization_I\Data\MappingEx.mxd')
+mxd.findAndReplaceWorkspacePaths(r'D:\Semester2\gis4207_Customization_I\Data', r'D:\Semester2\gis4207_Customization_I\day06\lab\MatthewRandEmmaY\mxdTemp')
+mxd.saveACopy(r'D:\Semester2\gis4207_Customization_I\day06\lab\MatthewRandEmmaY\mxdTemp\MappingEX.mxd')
+
+del mxd
