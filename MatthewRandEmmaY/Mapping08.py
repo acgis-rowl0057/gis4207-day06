@@ -17,19 +17,21 @@ import os
 def exportCanadaPDF():
     mxd = arcpy.mapping.MapDocument(r'D:\Semester2\gis4207_Customization_I\Data\MappingEx.mxd')
     df = arcpy.mapping.ListDataFrames(mxd)[0]
-    arcpy.mapping.ExportToPDF(mxd, r'D:\Semester2\gis4207_Customization_I\day06\temp\Canada.PDF',df, df_export_width=1600,df_export_height=1200)
+    df.scale = 100000000
+    arcpy.mapping.ExportToPDF(mxd, r'D:\Semester2\gis4207_Customization_I\day06\temp\Canada.PDF',df)
     del mxd
 
 def exportWorldPDF():
     mxd = arcpy.mapping.MapDocument(r'D:\Semester2\gis4207_Customization_I\Data\MappingEx.mxd')
     df = arcpy.mapping.ListDataFrames(mxd)[1]
-    arcpy.mapping.ExportToPDF(mxd, r'D:\Semester2\gis4207_Customization_I\day06\temp\World.PDF',df, df_export_width=1600,df_export_height=1200)
+    df.scale = 150000000
+    arcpy.mapping.ExportToPDF(mxd, r'D:\Semester2\gis4207_Customization_I\day06\temp\World.PDF',df)
     del mxd
 
 def exportSFPDF():
     mxd = arcpy.mapping.MapDocument(r'D:\Semester2\gis4207_Customization_I\Data\MappingEx.mxd')
     df = arcpy.mapping.ListDataFrames(mxd)[2]
-    arcpy.mapping.ExportToPDF(mxd, r'D:\Semester2\gis4207_Customization_I\day06\temp\SanFrancisco.PDF',df, df_export_width=1600,df_export_height=1200)
+    arcpy.mapping.ExportToPDF(mxd, r'D:\Semester2\gis4207_Customization_I\day06\temp\SanFrancisco.PDF',df)
     del mxd
 
 def createPDF():
