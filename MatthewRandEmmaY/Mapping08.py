@@ -39,14 +39,10 @@ def createPDF():
     pdfDoc.appendPages(r'D:\Semester2\gis4207_Customization_I\day06\temp\World.PDF')
     pdfDoc.appendPages(r'D:\Semester2\gis4207_Customization_I\day06\temp\SanFrancisco.PDF')
     pdfDoc.saveAndClose()
-
-
-
-
-
-
+    del pdfDoc
 
 
 exportCanadaPDF()
 exportWorldPDF()
 exportSFPDF()
+createPDF()
