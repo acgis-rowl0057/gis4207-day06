@@ -10,7 +10,7 @@
 #-------------------------------------------------------------------------------
 import arcpy
 
-##mxd = arcpy.mapping.MapDocument(r'D:\Semester2\gis4207_Customization_I\Data\MappingEx.mxd')
+
 mxd = arcpy.mapping.MapDocument("CURRENT")
 
 def main():
@@ -31,12 +31,7 @@ def main():
                 else:
                     lyr.visible = False
 
-##                        print "this layer is not a point feature class"
-##                        print lyr.name
 
-##                        print ("{}\t{}\t{}").format(lyr.name,lyr.dataSource, desc.datatype)
-
-#getPath()
     arcpy.RefreshTOC()
     arcpy.RefreshActiveView()
 

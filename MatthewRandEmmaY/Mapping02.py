@@ -16,5 +16,6 @@ mxd = arcpy.mapping.MapDocument("CURRENT")
 def setActiveView():
     mxd.activeView = "World"
 
+
 setActiveView()
 

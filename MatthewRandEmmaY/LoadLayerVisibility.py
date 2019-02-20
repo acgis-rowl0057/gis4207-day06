@@ -23,15 +23,6 @@ def changeTextBoolean():
         file1.write(fileData)
 changeTextBoolean()
 
-##def getLayerList():
-##    f = open(text,"r")
-##    column = f.readlines()
-##    visibility = []
-##    for x in column:
-##        visibility.append(x.split("\t")[1])
-##    f.close()
-##    print visibility
-##getLayerList()
 
 def turnOnAllLayers():
     for df in arcpy.mapping.ListDataFrames(mxd):
